@@ -4,7 +4,17 @@
 
 .toolbar {
 display: flex;
-align-items: center
+align-items: center;
+
+&.button {
+  margin-left: 5px;
+
+  &:first-child{
+   margin-left:0 ;
+  }
+}
+
+
 }
 
 .no-select{
