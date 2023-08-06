@@ -12,7 +12,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button class="button" mat-flat-button color="primary">In Basket</button>
-      <button  class="button" mat-flat-button color="primary">Details</button>
+      <button  class="button" mat-flat-button color="primary" [routerLink]="['/product',product.id]">Details</button>
     </mat-card-actions>
   </mat-card>
 
