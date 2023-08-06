@@ -4,6 +4,7 @@ export interface IProducts {
   title: string,
   price: number,
   image?: string,
+  year: number
   configure:IProductsConfig
 }
 export interface IProductsConfig {
