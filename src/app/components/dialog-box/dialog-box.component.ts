@@ -12,6 +12,10 @@ export class DialogBoxComponent {
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {}
 
+  test(){
+    console.log(this.data)
+  }
+
   onNoClick(): void {
     this.dialogRef.close();
   }

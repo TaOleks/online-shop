@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { IProducts } from 'src/app/models/products';
 import { ProductsService } from 'src/app/services/products.service';
@@ -29,10 +29,10 @@ ngOnInit():void{
 
 
 openDialog(): void {
-  const dialogRef = this.dialog.open(DialogBoxComponent, {
-    width: '700px',
-    data:123
-  })
+  let dialogConfig= new MatDialogConfig();
+  dialogConfig.width = '500px';
+  // dialogConfig.data = this.products
+  const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig)
 }
 
 ngOnDestroy(){
