@@ -31,7 +31,7 @@ ngOnInit():void{
 openDialog(): void {
   let dialogConfig= new MatDialogConfig();
   dialogConfig.width = '500px';
-  // dialogConfig.data = this.products
+  dialogConfig.disableClose = true
   const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig)
 }
 
