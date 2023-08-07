@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { IProducts } from 'src/app/models/products';
 import { ProductsService } from 'src/app/services/products.service';
+import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 
 @Component({
   selector: 'app-products',
@@ -14,7 +16,7 @@ productsSubscription!: Subscription;
 canEdit:boolean =false;
 canView: boolean=false;
 
-constructor(private PraductsService:ProductsService){}
+constructor(private PraductsService:ProductsService, public dialog: MatDialog){}
 
 ngOnInit():void{
 // ... here ligic for autorization and if everything ok =>
@@ -22,6 +24,14 @@ ngOnInit():void{
 
   this.productsSubscription = this.PraductsService.getProducts().subscribe((data)=>{
     this.products = data;
+  })
+}
+
+
+openDialog(): void {
+  const dialogRef = this.dialog.open(DialogBoxComponent, {
+    width: '700px',
+    data:123
   })
 }
 
