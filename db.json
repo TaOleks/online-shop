@@ -14,43 +14,17 @@
       }
     },
     {
-      "id": 2,
-      "title": "MacBook Pro (Intel)",
-      "price": 1000,
+      "title": "f v d",
+      "price": "",
       "image": "assets/images/image MacBook.webp",
-      "year": 2022,
+      "year": "",
       "configure": {
-        "chip": "Intel",
-        "SSD": "256 GB",
-        "memory": "8 GB",
-        "display": "Retina"
-      }
-    },
-    {
-      "id": 3,
-      "title": "MacBook Pro",
-      "price": 1300,
-      "image": "assets/images/image MacBook.webp",
-      "year": 2023,
-      "configure": {
-        "chip": "M1",
-        "SSD": "256 GB",
-        "memory": "16 GB",
-        "display": "Retina"
-      }
-    },
-    {
-      "title": "Iphon",
-      "price": "2000",
-      "image": "assets/images/image MacBook.webp",
-      "year": "2023",
-      "configure": {
-        "chip": "M2",
+        "chip": "",
         "ssd": "",
         "memory": "",
         "display": ""
       },
-      "id": 4
+      "id": 7
     }
   ]
 }

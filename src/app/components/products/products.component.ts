@@ -27,6 +27,17 @@ ngOnInit():void{
   })
 }
 
+deleteItem(id:number){
+console.log(id)
+this.PraductsService.deleteProduct(id).subscribe(()=>this.products.find((item)=>{
+
+  if(id===item.id){
+    let idx = this.products.findIndex((data)=>data.id===id)
+    this.products.splice(idx,1)
+  }
+}))
+}
+
 
 openDialog(): void {
   let dialogConfig= new MatDialogConfig();

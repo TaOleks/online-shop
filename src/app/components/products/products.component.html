@@ -26,7 +26,19 @@
     <mat-card-actions>
       <button class="button" mat-flat-button color="primary">In Basket</button>
       <button  class="button" mat-flat-button color="primary" [routerLink]="['/product',product.id]">Details</button>
+
+
+    <button class="button" mat-flat-button color="primary"
+     mat-button [matMenuTriggerFor]="menu">Edit</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="deleteItem(product.id)">Delete</button>
+      <button mat-menu-item>Edit</button>
+    </mat-menu>
+
     </mat-card-actions>
+
+
+
   </mat-card>
 
 </div>

@@ -21,5 +21,7 @@ url:string = 'http://localhost:3000/products'
     return this.http.post<IProducts>(this.url, product)
   }
 
-
+deleteProduct(id:number){
+  return this.http.delete<any>(`${this.url}/${id}`)
+}
 }
