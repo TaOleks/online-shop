@@ -14,17 +14,17 @@
       }
     },
     {
-      "title": "f v d",
-      "price": "",
+      "id": 7,
+      "title": "fqqq",
+      "price": "22222",
       "image": "assets/images/image MacBook.webp",
       "year": "",
       "configure": {
-        "chip": "",
-        "ssd": "",
-        "memory": "",
-        "display": ""
-      },
-      "id": 7
+        "chip": null,
+        "ssd": null,
+        "memory": null,
+        "display": null
+      }
     }
   ]
 }

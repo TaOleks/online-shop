@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { IProducts } from 'src/app/models/products';
 import { ProductsService } from 'src/app/services/products.service';
 import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
+import { DialogConfig } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-products',
@@ -38,20 +39,31 @@ this.PraductsService.deleteProduct(id).subscribe(()=>this.products.find((item)=>
 }
 
 
-openDialog(): void {
+openDialog(product?:IProducts): void {
   let dialogConfig= new MatDialogConfig();
   dialogConfig.width = '500px';
-  dialogConfig.disableClose = true
+  dialogConfig.disableClose = true;
+  dialogConfig.data = product;
   const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig)
 
   dialogRef.afterClosed().subscribe((data)=>{
-    if(data)
+    if(data && data.id)
+    this.updateData(data)
+    else
     this.postData(data)
   })
 }
 postData(data:IProducts){
-  console.log(data)
+
   this.PraductsService.postProduct(data).subscribe((data)=>this.products.push(data))
+}
+
+updateData(product:IProducts){
+  this.PraductsService.updateProduct(product).subscribe((data)=>{
+   this.products =this.products.map((product)=>{
+    if (product.id===data.id) return data
+    else return product
+   })})
 }
 
 ngOnDestroy(){
