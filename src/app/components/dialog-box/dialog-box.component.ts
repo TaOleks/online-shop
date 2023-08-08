@@ -31,7 +31,21 @@ display:new FormControl('')
   }
 
   onSubmit(){
-    console.log(this.myForm)
+this.data={
+  title:this.myForm.value.title,
+  price:this.myForm.value.price,
+  "image": "assets/images/image MacBook.webp",
+  year:this.myForm.value.year,
+  configure:{
+  chip:this.myForm.value.chip,
+  ssd:this.myForm.value.ssd,
+  memory:this.myForm.value.memory,
+  display:this.myForm.value.display,
+  }
+}
+
+
+    this.dialogRef.close(this.data);
   }
 
   ngOnInit():void{

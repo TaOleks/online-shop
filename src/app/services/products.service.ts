@@ -17,5 +17,9 @@ url:string = 'http://localhost:3000/products'
     return this.http.get<IProducts>(`${this.url}/${id}`);
   }
 
+  postProduct(product:IProducts){
+    return this.http.post<IProducts>(this.url, product)
+  }
+
 
 }

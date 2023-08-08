@@ -1,5 +1,5 @@
 {
-  "products":[
+  "products": [
     {
       "id": 1,
       "title": "MacBook Air",
@@ -11,7 +11,7 @@
         "SSD": "256 GB",
         "memory": "8 GB",
         "display": "Retina"
-    }
+      }
     },
     {
       "id": 2,
@@ -24,7 +24,7 @@
         "SSD": "256 GB",
         "memory": "8 GB",
         "display": "Retina"
-    }
+      }
     },
     {
       "id": 3,
@@ -37,7 +37,20 @@
         "SSD": "256 GB",
         "memory": "16 GB",
         "display": "Retina"
-    }
+      }
+    },
+    {
+      "title": "Iphon",
+      "price": "2000",
+      "image": "assets/images/image MacBook.webp",
+      "year": "2023",
+      "configure": {
+        "chip": "M2",
+        "ssd": "",
+        "memory": "",
+        "display": ""
+      },
+      "id": 4
     }
   ]
 }

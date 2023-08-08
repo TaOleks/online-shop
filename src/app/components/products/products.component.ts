@@ -33,6 +33,12 @@ openDialog(): void {
   dialogConfig.width = '500px';
   dialogConfig.disableClose = true
   const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig)
+
+  dialogRef.afterClosed().subscribe((data)=>this.postData(data))
+}
+postData(data:IProducts){
+  console.log(data)
+  this.PraductsService.postProduct(data).subscribe((data)=>this.products.push(data))
 }
 
 ngOnDestroy(){
