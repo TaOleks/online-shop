@@ -28,7 +28,6 @@ ngOnInit():void{
 }
 
 deleteItem(id:number){
-console.log(id)
 this.PraductsService.deleteProduct(id).subscribe(()=>this.products.find((item)=>{
 
   if(id===item.id){
@@ -45,7 +44,10 @@ openDialog(): void {
   dialogConfig.disableClose = true
   const dialogRef = this.dialog.open(DialogBoxComponent, dialogConfig)
 
-  dialogRef.afterClosed().subscribe((data)=>this.postData(data))
+  dialogRef.afterClosed().subscribe((data)=>{
+    if(data)
+    this.postData(data)
+  })
 }
 postData(data:IProducts){
   console.log(data)

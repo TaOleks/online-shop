@@ -27,7 +27,7 @@ display:new FormControl('')
 
 
   onNoClick(): void {
-    this.dialogRef.close();
+    this.dialogRef.close(null);
   }
 
   onSubmit(){
